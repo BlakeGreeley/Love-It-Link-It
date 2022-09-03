@@ -34,13 +34,34 @@ const getAllLinks = (req, res) => {
 };
 
 //updating one link:
-//do next.
+
+const updateLink = (req, res) => {
+    Link.findOneAndUpdate({_id: req.params.id}, req.body, {
+            new: true,
+            runValidators: true,
+        })
+        .then((updatedLink) => {
+            res.json({updatedLink});
+        })
+        .catch((err) => {res.status(400).json({err});
+    });
+};
 
 //deleting one link:
-//do after update.
+
+const deleteLink = (req, res) => {
+    Link.deleteOne({_id: req.params.id})
+        .then((deletedLink) => {
+            res.json({ deletedLink });
+        })
+        .catch((err) => {res.json(400).json({err});
+    });
+};
 
 module.exports = {
     createNewLink,
     getAllLinks,
     getOneLink,
+    updateLink,
+    deleteLink,
 }
