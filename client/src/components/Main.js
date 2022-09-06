@@ -26,6 +26,8 @@ const Main = () => {
                 {/* signout link */} <button type="submit" link to='/new' className="btn-header">Signout</button>
             </div>
 
+            <h2 className="message">Welcome, </h2>
+
             <div className="content">
                 <div className="left-content">
                     <h2 className="label">Explore Current Linked Pages:</h2>
