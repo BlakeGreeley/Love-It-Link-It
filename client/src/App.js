@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import Main from "./components/Main";
 import CreateLink from "./components/CreateLink";
+import ViewLink from "./components/ViewLink";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path='/new' element={<CreateLink/>} />
-          <Route></Route>
+          <Route path='/view' element={<ViewLink/>} />
           <Route></Route>
           <Route></Route>
         </Routes>
