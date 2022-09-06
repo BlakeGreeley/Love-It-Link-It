@@ -6,7 +6,6 @@ const LinkSchema = {
         required: [true, 'URL can\'t be empty'],
         minLength: [3, "Link must be 3 or more characters."],
         maxLength: [256, "Link must be no more than characters 256."],
-        unique: true
     },
 
     linkOneDescription: {
@@ -20,7 +19,6 @@ const LinkSchema = {
         type: String,
         required: [false, 'second URL can be empty'],
         maxLength: [256, "Link must be no more than characters 256."],
-        unique: true
     },
 
     linkTwoDescription: {
@@ -33,7 +31,6 @@ const LinkSchema = {
         type: String,
         required: [false, 'third URL can be empty'],
         maxLength: [256, "Link must be no more than characters 256."],
-        unique: true
     },
 
     linkThreeDescription: {
@@ -46,7 +43,6 @@ const LinkSchema = {
         type: String,
         required: [false, 'Fourth URL can be empty'],
         maxLength: [256, "Link must be no more than characters 256."],
-        unique: true
     },
 
     linkFourDescription: {
