@@ -86,3 +86,8 @@ th {
 td {
   border: solid black 1px;
 }
+
+.form-start{
+  text-align: center;
+  margin: 40px;
+}
