@@ -32,7 +32,25 @@ const Main = () => {
                     
                     {/* TABLE WITH ALL THE CURRENT LINKED PAGES */}
                     <div className="table">
+                        <thead>
+                            <tr>
+                                <th>Name </th>
+                                <th>First Link </th>
+                                <th>Expand </th>
+                            </tr>
+                        </thead>
 
+                        <tbody>
+                            {allLinks.map((link, index) => {
+                                return (
+                                    <tr key = {link._id}>
+                                        <td>{link._id}</td>
+                                        <td>{link.linkOne}</td>
+                                        <td><button>Details</button></td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
                     </div>
                 </div>
 
