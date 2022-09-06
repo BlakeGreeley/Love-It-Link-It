@@ -1,4 +1,4 @@
-const Link = require("../models/link.models");
+const Link = require("../models/link.model");
 
 // creating a new link page:
 
