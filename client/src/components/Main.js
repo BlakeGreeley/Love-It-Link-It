@@ -19,9 +19,35 @@ const Main = () => {
 
     return (
         <div className="container">
+
+            {/* HEADER */}
             <div className="header">
                 <h1 className="title">Love It Link It</h1>
                 {/* signout link */}
+            </div>
+
+            <div className="content">
+                <div className="left-content">
+                    <h2 className="label">Explore Current Linked Pages:</h2>
+                    
+                    {/* TABLE WITH ALL THE CURRENT LINKED PAGES */}
+                    <div className="table">
+
+                    </div>
+                </div>
+
+                <div className="right-content">
+                    {/* WHERE CREATE BOX IS LOCATED THAT REDIRECTS TO CREATE PAGE */}
+                    <div className="create-box">
+                        <h3>Add a Linked Page</h3>
+                        <button className="btn">Create</button>
+                    </div>
+
+                    {/* BOX ABOUT THE COMPANY AND ABOUT THE ENGINEER THAT CODED IT */}
+                    <div className="about-box">
+                        <h3 className="label">About Us:</h3>
+                    </div>
+                </div>
             </div>
         </div>
     )
