@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import Main from "./components/Main";
+import CreateLink from "./components/CreateLink";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main/>}/>
-          <Route></Route>
+          <Route path='/new' element={<CreateLink/>} />
           <Route></Route>
           <Route></Route>
           <Route></Route>

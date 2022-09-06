@@ -23,7 +23,7 @@ const Main = () => {
             {/* HEADER */}
             <div className="header">
                 <h1 className="title">Love It Link It</h1>
-                {/* signout link */} <button className="btn-header">Signout</button>
+                {/* signout link */} <button type="submit" link to='/new' className="btn-header">Signout</button>
             </div>
 
             <div className="content">
@@ -45,7 +45,7 @@ const Main = () => {
                                 return (
                                     <tr key = {link._id}>
                                         <td>{link._id}</td>
-                                        <td>{link.linkOne}</td>
+                                        <td><a href='{link.linkOne}'>{link.linkOne}</a></td>
                                         <td><button>Details</button></td>
                                     </tr>
                                 )
@@ -58,7 +58,7 @@ const Main = () => {
                     {/* WHERE CREATE BOX IS LOCATED THAT REDIRECTS TO CREATE PAGE */}
                     <div className="create-box">
                         <h3>Add a Linked Page</h3>
-                        <button className="btn">Create</button>
+                        <Link to ="/new" className="btn-body">Create</Link>
                     </div>
 
                     {/* BOX ABOUT THE COMPANY AND ABOUT THE ENGINEER THAT CODED IT */}
