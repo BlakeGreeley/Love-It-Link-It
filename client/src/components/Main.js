@@ -48,7 +48,7 @@ const Main = () => {
                                     <tr key = {link._id}>
                                         <td>{link._id}</td>
                                         <td><a href='{link.linkOne}'>{link.linkOne}</a></td>
-                                        <td><button>Details</button></td>
+                                        <td><Link to ={`/view/${link._id}`} className="btn-action">Expand</Link></td>
                                     </tr>
                                 )
                             })}

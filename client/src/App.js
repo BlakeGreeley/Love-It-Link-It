@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path='/new' element={<CreateLink/>} />
-          <Route path='/view' element={<ViewLink/>} />
+          <Route path='/view/:id' element={<ViewLink/>} />
           <Route></Route>
           <Route></Route>
         </Routes>

@@ -73,17 +73,17 @@
 }
 
 .table {
-  width: 100%;
   border: solid black 1px;
   justify-content: space-between;
 }
 
 th {
   border: solid black 1px;
-  width: 100%;
+  
 }
 
 td {
+  
   border: solid black 1px;
 }
 
@@ -100,12 +100,24 @@ td {
 }
 
 .inputs {
-  text-align: center;
+  text-align: left;
   font-size: 18px;
+  margin: 10px;
+  padding-bottom: 20px;
+}
+
+.page-title{
+  text-decoration: underline;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 input {
   width: 70%;
   height: 24px;
   margin: 10px;
+}
+
+.center {
+  text-align: center;
+  font-size: 34px;
 }

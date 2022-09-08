@@ -22,13 +22,13 @@ const ViewLink = () => {
             .then((response) => {
                 console.log(response.data);
                 setLinkOne(response.data.linkOne);
-                setLinkOneDescription(response.data.setLinkOneDescription);
+                setLinkOneDescription(response.data.linkOneDescription);
                 setLinkTwo(response.data.linkTwo);
-                setLinkTwoDescription(response.data.setLinkTwoDescription);
+                setLinkTwoDescription(response.data.linkTwoDescription);
                 setLinkThree(response.data.linkThree);
-                setLinkThreeDescription(response.data.setLinkThreeDescription);
+                setLinkThreeDescription(response.data.linkThreeDescription);
                 setLinkFour(response.data.linkFour);
-                setLinkFourDescription(response.data.setLinkFourDescription);
+                setLinkFourDescription(response.data.linkFourDescription);
             })
             .catch((err) => {
                 console.log(err.response);
@@ -61,6 +61,53 @@ const ViewLink = () => {
                 </div>
             </div>
 
+            {/* TITLE */}
+
+            <h2 className='center'>*Blank's, Page</h2>
+
+            <div className='view-table'>
+                <div className='form'>
+                    <div className='inputs'>
+                        <h3 className='page-title'>Link One: </h3>
+                        <h3><a href>{linkOne}</a></h3>
+                    </div>
+
+                    <div className='inputs'>
+                        <h3 className='page-title'>Link One Description: </h3>
+                        <h3>{linkOneDescription}</h3>
+                    </div>
+
+                    <div className='inputs'>
+                        <h3 className='page-title'>Link Two: </h3>
+                        <h3><a href>{linkTwo}</a></h3>
+                    </div>
+
+                    <div className='inputs'>
+                        <h3 className='page-title'>Link Two Description: </h3>
+                        <h3>{linkTwoDescription}</h3>
+                    </div>
+
+                    <div className='inputs'>
+                        <h3 className='page-title'>Link Three: </h3>
+                        <h3>{linkThree}</h3>
+                    </div>
+
+                    <div className='inputs'>
+                        <h3 className='page-title'>Link Three Description: </h3>
+                        <h3>{linkThreeDescription}</h3>
+                    </div>
+
+                    <div className='inputs'>
+                        <h3 className='page-title'>Link Four: </h3>
+                        <h3>{linkFour}</h3>
+                    </div>
+
+                    <div className='inputs'>
+                        <h3 className='page-title'>Link Four Description: </h3>
+                        <h3>{linkFourDescription}</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
