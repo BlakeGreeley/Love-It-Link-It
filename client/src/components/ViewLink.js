@@ -66,10 +66,11 @@ const ViewLink = () => {
             <h2 className='center'>*Blank's, Page</h2>
 
             <div className='view-table'>
+                
                 <div className='form'>
                     <div className='inputs'>
                         <h3 className='page-title'>Link One: </h3>
-                        <h3><a href>{linkOne}</a></h3>
+                         <h3><a href='${linkOne}'>{linkOne}</a></h3> {/* idea */}
                     </div>
 
                     <div className='inputs'>
@@ -108,11 +109,14 @@ const ViewLink = () => {
                     </div>
 
                     <div className='actions'>
-                        <button onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
+                        <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
                             Delete Page
-                        </button>
+                        </Link>
+
+                        <Link to = {`/edit/${Link._id}`} className='btn-body'>
+                            Edit Page
+                        </Link>
                     </div>
-                    
                 </div>
             </div>
         </div>
