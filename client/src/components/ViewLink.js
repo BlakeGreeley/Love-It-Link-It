@@ -106,6 +106,13 @@ const ViewLink = () => {
                         <h3 className='page-title'>Link Four Description: </h3>
                         <h3>{linkFourDescription}</h3>
                     </div>
+
+                    <div className='actions'>
+                        <button onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
+                            Delete Page
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
         </div>
