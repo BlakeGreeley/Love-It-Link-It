@@ -14,6 +14,7 @@ const ViewLink = () => {
     const [linkFourDescription, setLinkFourDescription] = useState("");
     const [errors, setErrors] = useState("");
     const navigate = useNavigate();
+    const [allLinks, setAllLinks] = useState([]);
     console.log(id);
 
     useEffect(() => {
@@ -107,16 +108,34 @@ const ViewLink = () => {
                         <h3 className='page-title'>Link Four Description: </h3>
                         <h3>{linkFourDescription}</h3>
                     </div>
+                    
+                    
+                    {/* <div className='actions'>
+                        {allLinks.map((link, index) => {
+                            return(
+                            <div className='actions'>
+                                <Link onClick = {() => deleteHandler(link._id)} className="btn-body" navigate to = '/'>
+                                    Delete Page
+                                </Link>
 
-                    <div className='actions'>
-                        <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
-                            Delete Page
-                        </Link>
+                                <Link to = {`/edit/${link._id}`} className='btn-body'>
+                                    Edit Page
+                                </Link>
+                            </div>
+                            )
+                        })}   
+                    </div> */}
 
-                        <Link to = {`/edit/${Link._id}`} className='btn-body'>
-                            Edit Page
-                        </Link>
-                    </div>
+                            <div className='actions'>
+                                <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
+                                    Delete Page
+                                </Link>
+
+                                <Link to = {`/edit/${Link._id}`} className='btn-body'>
+                                    Edit Page
+                                </Link>
+                            </div>
+
                 </div>
             </div>
         </div>
