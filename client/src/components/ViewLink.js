@@ -113,7 +113,7 @@ const ViewLink = () => {
                     {/* <div className='actions'>
                         {allLinks.map((link, index) => {
                             return(
-                            <div className='actions'>
+                            <div className='actions' key = {link.id}>
                                 <Link onClick = {() => deleteHandler(link._id)} className="btn-body" navigate to = '/'>
                                     Delete Page
                                 </Link>
@@ -126,15 +126,15 @@ const ViewLink = () => {
                         })}   
                     </div> */}
 
-                            <div className='actions'>
-                                <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
-                                    Delete Page
-                                </Link>
+                        <div className='actions'>
+                            <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
+                                Delete Page
+                            </Link>
 
-                                <Link to = {`/edit/${Link._id}`} className='btn-body'>
-                                    Edit Page
-                                </Link>
-                            </div>
+                            <Link to = {`/edit/${Link._id}`} className='btn-body'>
+                                Edit Page
+                            </Link>
+                        </div>
 
                 </div>
             </div>
