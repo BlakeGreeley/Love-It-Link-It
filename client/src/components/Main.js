@@ -38,7 +38,7 @@ const Main = () => {
                             <tr>
                                 <th>Name </th>
                                 <th>First Link </th>
-                                <th>Expand </th>
+                                <th>Actions </th>
                             </tr>
                         </thead>
 
@@ -46,9 +46,12 @@ const Main = () => {
                             {allLinks.map((link, index) => {
                                 return (
                                     <tr key = {link._id}>
-                                        <td>{link._id}</td>
+                                        <td>{link.name}</td>
                                         <td><a href='{link.linkOne}'>{link.linkOne}</a></td>
-                                        <td><Link to ={`/view/${link._id}`} className="btn-action">Expand</Link></td>
+                                        <td>
+                                            <Link to ={`/view/${link._id}`} className="btn-body">Expand</Link>
+                                            <Link to = {`/edit/${link._id}`} className='btn-body'>Edit</Link>
+                                        </td>
                                     </tr>
                                 )
                             })}

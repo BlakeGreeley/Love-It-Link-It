@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 
 const LinkSchema = {
+    name: {
+        type: String,
+        required: [true, 'Name cannot be empty'],
+        minLength: [3, "Link must be 3 or more characters."],
+        maxLength: [256, "Link must be no more than characters 256."],
+    },
+
     linkOne: {
         type: String,
         required: [true, 'URL can\'t be empty'],

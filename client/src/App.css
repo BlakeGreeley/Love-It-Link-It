@@ -19,6 +19,12 @@
   margin-left: 25px;
 }
 
+.description {
+  text-align: center;
+  font-size: 48px;
+  text-decoration: underline;
+}
+
 .btn-header {
   height: 25px;
   margin-top: 25px;
@@ -73,18 +79,21 @@
 }
 
 .table {
+  
   border: solid black 1px;
   justify-content: space-between;
 }
 
 th {
   border: solid black 1px;
-  
+  width: 100%;
+  height: 30px;
 }
 
 td {
-  
+  width: 100%;
   border: solid black 1px;
+  height: 30px;
 }
 
 .form-start{

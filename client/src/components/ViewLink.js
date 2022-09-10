@@ -4,6 +4,7 @@ import { Link, useParams, useNavigate} from 'react-router-dom';
 
 const ViewLink = () => {
     const {id} = useParams();
+    const [name, setName] = useState("");
     const [linkOne, setLinkOne] = useState("");
     const [linkOneDescription, setLinkOneDescription] = useState("");
     const [linkTwo, setLinkTwo] = useState("");
@@ -22,6 +23,7 @@ const ViewLink = () => {
             .get(`http://localhost:8000/api/link/${id}`)
             .then((response) => {
                 console.log(response.data);
+                setName(response.data.name);
                 setLinkOne(response.data.linkOne);
                 setLinkOneDescription(response.data.linkOneDescription);
                 setLinkTwo(response.data.linkTwo);
@@ -64,7 +66,7 @@ const ViewLink = () => {
 
             {/* TITLE */}
 
-            <h2 className='center'>*Blank's, Page</h2>
+            <h2 className='center'>{name}'s Page</h2>
 
             <div className='view-table'>
                 
@@ -81,7 +83,7 @@ const ViewLink = () => {
 
                     <div className='inputs'>
                         <h3 className='page-title'>Link Two: </h3>
-                        <h3><a href>{linkTwo}</a></h3>
+                        <h3><a href ='${linkTwo}'>{linkTwo}</a></h3>
                     </div>
 
                     <div className='inputs'>
@@ -91,7 +93,7 @@ const ViewLink = () => {
 
                     <div className='inputs'>
                         <h3 className='page-title'>Link Three: </h3>
-                        <h3>{linkThree}</h3>
+                        <h3><a href ='${linkThree}'>{linkThree}</a></h3>
                     </div>
 
                     <div className='inputs'>
@@ -101,40 +103,19 @@ const ViewLink = () => {
 
                     <div className='inputs'>
                         <h3 className='page-title'>Link Four: </h3>
-                        <h3>{linkFour}</h3>
+                        <h3><a href ='${linkFour}'>{linkFour}</a></h3>
                     </div>
 
                     <div className='inputs'>
                         <h3 className='page-title'>Link Four Description: </h3>
                         <h3>{linkFourDescription}</h3>
                     </div>
-                    
-                    
-                    {/* <div className='actions'>
-                        {allLinks.map((link, index) => {
-                            return(
-                            <div className='actions' key = {link.id}>
-                                <Link onClick = {() => deleteHandler(link._id)} className="btn-body" navigate to = '/'>
-                                    Delete Page
-                                </Link>
 
-                                <Link to = {`/edit/${link._id}`} className='btn-body'>
-                                    Edit Page
-                                </Link>
-                            </div>
-                            )
-                        })}   
-                    </div> */}
-
-                        <div className='actions'>
-                            <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
-                                Delete Page
-                            </Link>
-
-                            <Link to = {`/edit/${Link._id}`} className='btn-body'>
-                                Edit Page
-                            </Link>
-                        </div>
+                    <div className='actions'>
+                        <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
+                            Delete Page
+                        </Link>
+                    </div>
 
                 </div>
             </div>

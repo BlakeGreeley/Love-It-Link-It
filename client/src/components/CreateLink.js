@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const CreateLink = ( ) => {
+    const [name, setName] = useState("");
     const [linkOne, setLinkOne] = useState("");
     const [linkOneDescription, setLinkOneDescription] = useState("");
     const [linkTwo, setLinkTwo] = useState("");
@@ -18,7 +19,7 @@ const CreateLink = ( ) => {
         e.preventDefault();
         axios
             .post("http://localhost:8000/api/link", 
-                {linkOne, linkOneDescription, linkTwo, linkTwoDescription, linkThree, linkThreeDescription, linkFour, linkFourDescription})
+                {name, linkOne, linkOneDescription, linkTwo, linkTwoDescription, linkThree, linkThreeDescription, linkFour, linkFourDescription})
             .then((response) => {
                 console.log(response);
                 navigate('/');
@@ -54,6 +55,17 @@ const CreateLink = ( ) => {
 
             <div className='form'>
                 <form onSubmit={handleSubmit} className='inputs'>
+                    <div className='inputs'>
+                        <label htmlFor='name'>Name for page: </label>
+                        <input
+                            type="text"
+                            className='form-input'
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                        />
+                        {errors.name ? <p>{errors.name.message}</p> : null}
+                    </div>
+
                     <div className='inputs'>
                         <label htmlFor='linkOne'>First Link: </label>
                         <input
