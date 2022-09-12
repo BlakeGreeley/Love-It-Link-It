@@ -1,4 +1,6 @@
 const User = require('../models/User');
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 // creating a user;
 
@@ -37,9 +39,21 @@ const login = async(req, res) => {
     let userQuery;
     try {
         userQuery = await User.findOne({ email: body.email});
+        if (userQuery === null) {
+            res.status(400).json({ msg: "email not found"});
+        }
     } catch (error) {
-        res.status(400).json({ msg: "email not found"});
+        res.status(400).json(error);
     }
+
+    const passwordCheck = bcrypt.compareSync(body.password, userQuery.password);
+
+    if(!passwordCheck) {
+        res.status(400).json({error: "email and password do not match"});
+        return;
+    }
+
+
 };
 
 // delete a user:
