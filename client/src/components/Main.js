@@ -27,6 +27,8 @@ const Main = () => {
             </div>
 
             <h2 className="message">Welcome, </h2>
+            <h2 className='message'>Want to increase your marketing visibility? </h2>
+            <h2 className='message'>Adding a link page will give you the boost you have been wanting!</h2>
 
             <div className="content">
                 <div className="left-content">
@@ -62,8 +64,8 @@ const Main = () => {
                 <div className="right-content">
                     {/* WHERE CREATE BOX IS LOCATED THAT REDIRECTS TO CREATE PAGE */}
                     <div className="create-box">
-                        <h3>Add a Linked Page</h3>
-                        <Link to ="/new" className="btn-body">Create</Link>
+                        <h3 className="description">Add a Linked Page:</h3>
+                        <Link to ="/new" className="btn-create">Create</Link>
                     </div>
 
                     {/* BOX ABOUT THE COMPANY AND ABOUT THE ENGINEER THAT CODED IT */}
