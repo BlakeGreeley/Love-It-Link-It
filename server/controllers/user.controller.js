@@ -3,14 +3,45 @@ const User = require('../models/User');
 // creating a user;
 
 const createNewUser = async (req, res) => {
+    const { body } = req;
+
     try {
-        await User.create(req.body);
-        res.json(newUser)
+        const queriedUser = await User.findOne({email: body.email});
+        if (queriedUser) {
+            console.log(queriedUser);
+            res.status(400).json({errMsg: "this user already exists"});
+            return;
+        }
+    } catch (error) {
+        res.status(400).json(error);
+    }
+
+    try {
+        const newUser = await User.create(req.body);
+        res.json(newUser);
     }
     catch (error) {
         res.status(400).json(error);
     }
 };
+
+// login user:
+
+const login = async(req, res) => {
+    const { body } = req;
+    if (!body.email) {
+        res.status(400).json({error: "No email provided - please provide email"});
+        return;
+    }
+
+    let userQuery;
+    try {
+        userQuery = await User.findOne({ email: body.email});
+    } catch (error) {
+        res.status(400).json({ msg: "email not found"});
+    }
+};
+
 // delete a user:
 
 const deleteUser = (req, res) => {
