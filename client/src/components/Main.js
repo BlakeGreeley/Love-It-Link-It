@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Main = () => {
     const [allLinks, setAllLinks] = useState([]);
+    const [allUsers, setAllUsers] = useState([]);
     useEffect(() => {
         axios
             .get('http://localhost:8000/api/link')
@@ -17,16 +18,16 @@ const Main = () => {
             });
     }, []);
 
+
     return (
         <div className="container">
 
             {/* HEADER */}
             <div className="header">
                 <h1 className="title">Love It Link It</h1>
-                {/* signout link */} <button type="submit" link to='/new' className="btn-header">Signout</button>
+                <Link type="submit" link to='/' className="btn-body">Signout</Link>
             </div>
 
-            <h2 className="message">Welcome, </h2>
             <h2 className='message'>Want to increase your marketing visibility? </h2>
             <h2 className='message'>Adding a link page will give you the boost you have been wanting!</h2>
 
