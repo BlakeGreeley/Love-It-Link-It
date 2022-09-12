@@ -37,6 +37,7 @@ const login = async(req, res) => {
     }
 
     let userQuery;
+    
     try {
         userQuery = await User.findOne({ email: body.email});
         if (userQuery === null) {
@@ -53,7 +54,8 @@ const login = async(req, res) => {
         return;
     }
 
-
+    const userToken = jwt.sign({_id: userQuery._id}, "tokenkey");
+    console.log(userToken);
 };
 
 // delete a user:
