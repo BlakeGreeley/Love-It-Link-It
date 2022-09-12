@@ -56,6 +56,11 @@ const login = async(req, res) => {
 
     const userToken = jwt.sign({_id: userQuery._id}, "tokenkey");
     console.log(userToken);
+
+    res.cookie("usertoken", userToken, "tokenkey", {
+        httpONly: true,
+        expires: new Date(Date.now() + 800000000),
+    }).json({msg: "successful login"});
 };
 
 // delete a user:
@@ -96,4 +101,5 @@ module.exports = {
     deleteUser,
     getOneUser,
     getAllUsers,
+    login,
 };
