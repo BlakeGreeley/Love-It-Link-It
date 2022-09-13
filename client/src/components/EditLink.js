@@ -63,8 +63,8 @@ const EditLink = (props) => {
             <div className="header">
                 <h1 className="title">Love It Link It</h1>
                 <div className='nav-btns'>
-                    {/* signout link */} <button className="btn-header">Signout</button>
-                    <Link to='/' className='btn-header'>Home</Link>
+                <Link to='/home' className='btn-header'>Home</Link>
+                    <Link to='/' className='btn-header'>Signout</Link>
                 </div>
             </div>
 
