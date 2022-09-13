@@ -25,6 +25,21 @@ const CreateUser = ( ) => {
             });
     };
 
+    const submitHandler = (e) => {
+        e.preventDefault();
+        axios
+            .post("http://localhost:8000/api/login", 
+                {username, password})
+            .then((response) => {
+                console.log(response);
+                navigate('/home');
+            })
+            .catch((err) => {
+                console.log(err.response.data.err.errors);
+                setErrors(err.response.data.err.errors);
+            });
+    }
+
     return (
         <div className='container'>
             
@@ -90,15 +105,39 @@ const CreateUser = ( ) => {
                         {/* BUTTON TO SUBMIT FORM */}
 
                         <button className='btn' type="submit" Link to = '/home'>
-                            register
+                            Register
                         </button>
                     </form>
                 </div>
 
                 <div className='right-side'>
-                    {/* <form onSubmit={submitHandler} className='inputs'>
-                        
-                    </form> */}
+                    <h1>Login:</h1>
+                    <form onSubmit={submitHandler} className='inputs'>
+                        <div className='inputs'>
+                                <label htmlFor='username'>Username: </label>
+                                <input
+                                    type="text"
+                                    className='form-input'
+                                    onChange={(e) => setUsername(e.target.value)}
+                                    value={username}
+                                />
+                                {errors.username ? <p>{errors.username.message}</p> : null}
+                            </div>
+
+                            <div className='inputs'>
+                                <label htmlFor='email'>Email: </label>
+                                <input
+                                    type="text"
+                                    className='form-input'
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                />
+                                {errors.email ? <p>{errors.email.message}</p> : null}
+                            </div>
+                            <Link className='btn-header' type="submit" Link to = '/home'>
+                                Login
+                            </Link>
+                    </form>
                 </div>
             </div>
         </div>
