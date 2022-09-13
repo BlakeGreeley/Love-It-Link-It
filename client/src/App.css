@@ -5,7 +5,7 @@
 body {
   background-color: #5CDB95;
   color: #05386B;
-  text-decoration: underline;
+
 }
 
 .title {
@@ -22,10 +22,13 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #05386B;
+  text-decoration: underline;
+
 }
 
 .message {
   margin-left: 25px;
+  text-decoration: underline;
 }
 
 .description {
@@ -178,4 +181,12 @@ input {
 .center {
   text-align: center;
   font-size: 34px;
+}
+
+.about-box {
+  text-decoration: none;
+}
+
+.label {
+  text-decoration: underline;
 }

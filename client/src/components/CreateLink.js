@@ -49,7 +49,7 @@ const CreateLink = ( ) => {
             <h2 className='message'>Want to increase your marketing visibility? <br/>
             Adding a link page will give you the boost you have been wanting!</h2>
 
-            <h1 className='form-start'>Enter Page Info:</h1>
+            <h1 className='description'>Enter Page Info:</h1>
 
             {/* FORM */}
 

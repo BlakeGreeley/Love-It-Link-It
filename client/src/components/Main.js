@@ -71,7 +71,9 @@ const Main = () => {
 
                     {/* BOX ABOUT THE COMPANY AND ABOUT THE ENGINEER THAT CODED IT */}
                     <div className="about-box">
-                        <h3 className="label">About Us:</h3>
+                        <h2 className="label">About Us:</h2>
+                        <h3 className="about-input">Welcome to love it link it!</h3>
+
                     </div>
                 </div>
             </div>

@@ -66,7 +66,7 @@ const ViewLink = () => {
 
             {/* TITLE */}
 
-            <h2 className='center'>{name}'s Page</h2>
+            <h2 className='description'>{name}'s Page</h2>
 
             <div className='view-table'>
                 
