@@ -22,7 +22,7 @@ const CreateLink = ( ) => {
                 {name, linkOne, linkOneDescription, linkTwo, linkTwoDescription, linkThree, linkThreeDescription, linkFour, linkFourDescription})
             .then((response) => {
                 console.log(response);
-                navigate('/');
+                navigate('/home');
             })
             .catch((err) => {
                 console.log(err.response.data.err.errors);
@@ -156,7 +156,7 @@ const CreateLink = ( ) => {
 
                     {/* BUTTON TO SUBMIT FORM */}
 
-                    <button className='btn' type="submit" link to = '/'>
+                    <button className='btn' type="submit" link to = '/home'>
                         Add Page
                     </button>
                 </form>

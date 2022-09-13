@@ -33,7 +33,7 @@ const Main = () => {
 
             <div className="content">
                 <div className="left-content">
-                    <h2 className="label">Explore Current Linked Pages:</h2>
+                    <h2 className="white-text">Explore Current Linked Pages:</h2>
                     
                     {/* TABLE WITH ALL THE CURRENT LINKED PAGES */}
                     <div className="table">
@@ -72,7 +72,20 @@ const Main = () => {
                     {/* BOX ABOUT THE COMPANY AND ABOUT THE ENGINEER THAT CODED IT */}
                     <div className="about-box">
                         <h2 className="label">About Us:</h2>
-                        <h3 className="about-input">Welcome to love it link it!</h3>
+                        <h3 className="about-input">Welcome to love it link it! My name is Blake Greeley, 
+                                                    I am a junior software engineer, creating technology 
+                                                    and building what is missing to increase people's 
+                                                    daily lives. I created 'love it link it' because
+                                                    I saw a gap that can help people promote their 
+                                                    content to the world. Many websites and social  
+                                                    medias only let you promote one link on your page  
+                                                    to your other  content on further sites. Instead with  
+                                                    this webiste you can create an outside page where you  
+                                                    can store the rest of your links. By putting that linked page in
+                                                    your linked description you now can promote all you want in one stop.
+                                                    Start promoting now by creating your first link page by hitting that create 
+                                                    button above.
+                        </h3>
 
                     </div>
                 </div>

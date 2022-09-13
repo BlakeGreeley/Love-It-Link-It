@@ -45,7 +45,7 @@ const ViewLink = () => {
             .then((res) => {
                 console.log(res);
                 console.log(res.data);
-                navigate("/");
+                navigate("/home");
             })
             .catch((err) => {
                 console.log(err);
@@ -66,7 +66,7 @@ const ViewLink = () => {
 
             {/* TITLE */}
 
-            <h2 className='description'>{name}'s Page</h2>
+            <h2 className='description'>{name} Page</h2>
 
             <div className='view-table'>
                 
@@ -112,7 +112,7 @@ const ViewLink = () => {
                     </div>
 
                     <div className='actions'>
-                        <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/'>
+                        <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/home'>
                             Delete Page
                         </Link>
                     </div>

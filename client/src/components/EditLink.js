@@ -47,7 +47,7 @@ const EditLink = (props) => {
             {name, linkOne, linkOneDescription, linkTwo, linkTwoDescription, linkThree, linkThreeDescription, linkFour, linkFourDescription})
             .then((response) => {
                 console.log(response);
-                navigate('/');
+                navigate('/home');
             })
             .catch((err) => {
                 console.log(err.response.data.err.errors);
