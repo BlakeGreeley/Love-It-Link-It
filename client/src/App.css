@@ -122,6 +122,24 @@ td {
   border: solid black 3px;
 }
 
+.left-side {
+  width: 90%;
+  margin: 30px;
+  padding: 20px;
+  border: solid black 3px;
+}
+
+.right-side {
+  width: 90%;
+  margin: 30px;
+  padding: 20px;
+  border: solid black 3px;
+}
+
+.user-form {
+  display: flex;
+}
+
 .inputs {
   text-align: left;
   font-size: 18px;

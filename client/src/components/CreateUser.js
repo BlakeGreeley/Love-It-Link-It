@@ -36,7 +36,7 @@ const CreateUser = ( ) => {
 
             {/* FORM */}
 
-            <div className='form'>
+            <div className='user-form'>
                 
                 {/* left form registration */}
 
@@ -93,6 +93,12 @@ const CreateUser = ( ) => {
                             register
                         </button>
                     </form>
+                </div>
+
+                <div className='right-side'>
+                    {/* <form onSubmit={submitHandler} className='inputs'>
+                        
+                    </form> */}
                 </div>
             </div>
         </div>
