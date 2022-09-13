@@ -104,7 +104,7 @@ const CreateUser = ( ) => {
 
                         {/* BUTTON TO SUBMIT FORM */}
 
-                        <button className='btn' type="submit" Link to = '/home'>
+                        <button className='btn-body' type="submit" Link to = '/home'>
                             Register
                         </button>
                     </form>
