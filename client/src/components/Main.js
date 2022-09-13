@@ -25,7 +25,7 @@ const Main = () => {
             {/* HEADER */}
             <div className="header">
                 <h1 className="title">Love It Link It</h1>
-                <Link type="submit" link to='/' className="btn-body">Signout</Link>
+                <Link type="submit" link to='/' className="btn-header">Signout</Link>
             </div>
 
             <h2 className='message'>Want to increase your marketing visibility? </h2>
