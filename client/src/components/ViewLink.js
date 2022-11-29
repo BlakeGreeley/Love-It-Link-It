@@ -66,7 +66,7 @@ const ViewLink = () => {
 
             {/* TITLE */}
 
-            <h2 className='description'>{name} Page</h2>
+            <h2 className='description2'>{name} Page</h2>
 
             <div className='view-table'>
                 
@@ -112,7 +112,7 @@ const ViewLink = () => {
                     </div>
 
                     <div className='actions'>
-                        <Link onClick = {() => deleteHandler(Link._id)} className="btn-body" navigate to = '/home'>
+                        <Link onClick = {() => deleteHandler(Link._id)} className="btn-create" navigate to = '/home'>
                             Delete Page
                         </Link>
                     </div>

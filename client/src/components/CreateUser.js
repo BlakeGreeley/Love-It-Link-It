@@ -104,7 +104,7 @@ const CreateUser = ( ) => {
 
                         {/* BUTTON TO SUBMIT FORM */}
 
-                        <button className='btn-body' type="submit" Link to = '/home'>
+                        <button className='btn-header' type="submit" Link to = '/home'>
                             Register
                         </button>
                     </form>
@@ -119,20 +119,19 @@ const CreateUser = ( ) => {
                                     type="text"
                                     className='form-input'
                                     onChange={(e) => setUsername(e.target.value)}
-                                    value={username}
+
                                 />
                                 {errors.username ? <p>{errors.username.message}</p> : null}
                             </div>
 
                             <div className='inputs'>
-                                <label htmlFor='email'>Email: </label>
+                                <label htmlFor='email'>Password: </label>
                                 <input
                                     type="text"
                                     className='form-input'
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    value={email}
+                                    onChange={(e) => confirmPassword(e.target.value)}
                                 />
-                                {errors.email ? <p>{errors.email.message}</p> : null}
+                                {errors.password ? <p>{errors.password.message}</p> : null}
                             </div>
                             <Link className='btn-header' type="submit" Link to = '/home'>
                                 Login

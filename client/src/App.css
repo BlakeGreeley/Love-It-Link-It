@@ -1,27 +1,37 @@
 .App-link {
   color: #05386B;;
 }
+h2 {
+  color: #00214d;
+}
+
+
+a {
+  color: #00ebc7;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 body {
-  background-color: #5CDB95;
-  color: #05386B;
+  background-color: #fffffe;
+  color: #fffffe;
 
 }
 
 .title {
   margin-left: 20px;
   font-size: 48px;
-  color: #05386B;
+  color: #00214d;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .header {
-  background-color: #5CDB95;
+  background-color: #fffffe;
   padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #05386B;
+  color: #00214d;
   text-decoration: underline;
 
 }
@@ -30,21 +40,29 @@ body {
   margin-left: 25px;
   text-decoration: underline;
 }
-
 .description {
   text-align: center;
+  color: #fffffe;
+  font-size: 48px;
+  text-decoration: underline;
+}
+
+.description2 {
+  text-align: center;
+  color: #00214d;
   font-size: 48px;
   text-decoration: underline;
 }
 
 .btn-header {
-  height: 22px;
+  height: 34px;
+  font-size: 24px;
   margin-right: 15px;
-  background-color: #05386B;
+  background-color: #00ebc7;
   padding: 2px;
   border-radius: 20%;
-  color: #EDF5E1;
-  border: #EDF5E1 1px solid;
+  color: #00214d;
+  border: #00214d 2px solid;
   text-decoration: none;
 }
 
@@ -52,11 +70,11 @@ body {
   font-size: 46px;
   margin-top: 25px;
   margin-left: 36%;
-  background-color: #05386B;
+  background-color: #00ebc7;
   padding: 2px;
   border-radius: 20%;
-  color: #EDF5E1;
-  border: #EDF5E1 2px solid;
+  color: #00214d;
+  border: #00214d 1px solid;
   text-decoration: none;
   align-items: center;
 }
@@ -66,11 +84,12 @@ body {
   padding: 5px;
   margin-top: 25px;
   margin-right: 15px;
-  background-color: #05386B;
+  margin-left: 15px;
+  background-color: #00ebc7;
   padding: 2px;
   border-radius: 20%;
-  color: #EDF5E1;
-  border: #EDF5E1 1px solid;
+  color: #00214d;
+  border: #00214d 1px solid;
   text-decoration: none;
 }
 
@@ -80,8 +99,8 @@ body {
 }
 
 .left-content {
-  border: solid #379683 3px;
-  background-color: #05386B;
+  border: solid #ff5470 3px;
+  background-color: #00214d;
   padding: 10px;
   width: 66%;
   margin: 5px;
@@ -89,21 +108,21 @@ body {
 
 .right-content {
   border: solid #379683 3px;
-  background-color: #05386B;
+  background-color: #00214d;
   width: 33%;
   margin: 5.3px;
 }
 
 .create-box {
   padding: 10px;
-  border: solid #379683 3px;
-  background-color: #EDF5E1;
+  border: solid #ff5470 3px;
+  background-color: #00214d;
   margin: 10px;
 }
 
 .about-box {
-  border: solid #379683 3px;
-  background-color: #EDF5E1;
+  border: solid #00ebc7 3px;
+  background-color: #00214d;
   padding: 10px;
   margin: 10px;
 }
@@ -113,13 +132,15 @@ body {
 }
 
 .table {
-  background-color: #EDF5E1;
+  background-color: #00214d;
   border: solid black 1px;
   justify-content: space-between;
 }
 
 th {
-  border: solid black 1px;
+  border: solid #ff5470 2px;
+  padding-left: 10px;
+  padding-right: 10px;
   width: 100%;
   height: 30px;
   font-size: 22px;
@@ -127,11 +148,14 @@ th {
 
 td {
   width: 100%;
-  border: solid black 1px;
+  border: solid #ff5470 2px;
   height: 60px;
   font-size: 22px;
 }
 
+.name {
+  padding-left: 10px;
+}
 .form-start{
   text-align: center;
   margin: 40px;
@@ -141,24 +165,24 @@ td {
   width: 90%;
   margin: 30px;
   padding: 20px;
-  background-color: #EDF5E1;
-  border: solid #379683 3px;
+  background-color: #00214d;
+  border: solid #ff5470 5px;
 }
 
 .left-side {
-  background-color: #EDF5E1;
+  background-color: #00214d;
   width: 90%;
   margin: 30px;
   padding: 20px;
-  border: solid black 3px;
+  border: #ff5470 solid  3px;
 }
 
 .right-side {
-  background-color: #EDF5E1;
+  background-color: #00214d;
   width: 90%;
   margin: 30px;
   padding: 20px;
-  border: solid black 3px;
+  border: #ff5470 solid  3px;
 }
 
 .user-form {

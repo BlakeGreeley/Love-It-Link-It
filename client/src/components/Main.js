@@ -49,7 +49,7 @@ const Main = () => {
                             {allLinks.map((link, index) => {
                                 return (
                                     <tr key = {link._id}>
-                                        <td>{link.name}</td>
+                                        <td className="name">{link.name}</td>
                                         <td><a href='{link.linkOne}'>{link.linkOne}</a></td>
                                         <td>
                                             <Link to ={`/view/${link._id}`} className="btn-body">Expand</Link>
@@ -71,7 +71,7 @@ const Main = () => {
 
                     {/* BOX ABOUT THE COMPANY AND ABOUT THE ENGINEER THAT CODED IT */}
                     <div className="about-box">
-                        <h2 className="label">About Us:</h2>
+                        <h2 className="white-text">About Us:</h2>
                         <h3 className="about-input">Welcome to love it link it! My name is Blake Greeley, 
                                                     I am a junior software engineer, creating technology 
                                                     and building what is missing to increase people's 

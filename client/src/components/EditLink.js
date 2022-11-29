@@ -68,7 +68,7 @@ const EditLink = (props) => {
                 </div>
             </div>
 
-            <h1 className="description">Edit your linked page</h1>
+            <h1 className="description2">Edit your linked page</h1>
 
             {/* FORM */}
 
@@ -176,7 +176,7 @@ const EditLink = (props) => {
 
                     {/* BUTTON TO SUBMIT FORM */}
 
-                    <button className='btn' type="submit" link to = '/'>
+                    <button className='btn-create' type="submit" link to = '/'>
                         Edit Page
                     </button>
                 </form>
